@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Ayuda</title>
+</head>
+<body>
+    <h1>Formulario de Contacto</h1>
+    <form action="#" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required aria-describedby="ayuda-nombre"><br><br>
+        <p style="color:blue">Ha de ser un nom de més de 3 caracters: Example: Bilal</p>
+        <div id="ayuda-nombre" class="error" hidden>Por favor, introduce un nombre válido</div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required aria-describedby="ayuda-email"><br><br>
+        <p style="color:blue">Ha de ser un mail correcte: Example: bilal.boulouban@crivanum.cat</p>
+        <div id="ayuda-email" class="error" hidden>Por favor, introduce un email válido</div>
+        
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required aria-describedby="ayuda-mensaje"></textarea><br><br>
+        <p style="color:blue">Ha de ser un nom de menys 250 caracters: Example: Bilal</p>
+        <div id="ayuda-mensaje" class="error" hidden>Por favor, introduce un mensaje válido</div>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        var inputs = document.querySelectorAll('input, textarea');
+        
+        inputs.forEach(function(input) {
+            input.addEventListener('invalid', function() {
+                var ayudaId = input.getAttribute('aria-describedby');
+                var ayuda = document.getElementById(ayudaId);
+                ayuda.hidden = false;
+            });
+
+            input.addEventListener('input', function() {
+                var ayudaId = input.getAttribute('aria-describedby');
+                var ayuda = document.getElementById(ayudaId);
+                ayuda.hidden = true;
+            });
+        });
+    </script>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</body>
+</html>

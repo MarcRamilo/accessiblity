@@ -1,0 +1,26 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: #fff;
+}
+
+.button, .input, .link {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover, .input:hover, .link:hover {
+    background-color: #ccc;
+}

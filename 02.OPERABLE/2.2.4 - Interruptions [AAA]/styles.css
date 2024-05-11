@@ -1,0 +1,20 @@
+.contenidor-desplegable {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    transition: height 0.3s ease;
+    overflow: hidden;
+}
+
+.botó-minimitzar {
+    cursor: pointer;
+    text-align: center;
+    padding: 5px;
+    background-color: #0095ff;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,21 @@
+abbr {
+    border-bottom: 1px dotted; /* Dotted line below the abbreviation */
+    cursor: help; /* Change cursor to help indicator */
+  }
+  
+  /* Optional styles to improve presentation */
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  p {
+    color: #666;
+  }
+  

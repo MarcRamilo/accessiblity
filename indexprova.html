@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensatges d'Estat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .success-message {
+            color: green;
+            font-weight: bold;
+        }
+        .error-message {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Exemple de Mensatges d'Estat</h1>
+        <button onclick="simularExit()">Simular Sortida amb Èxit</button>
+        <button onclick="simularError()">Simular Error</button>
+
+        <div id="missatge-estat" role="status" aria-live="assertive"></div>
+    </div>
+
+    <script>
+        function simularExit() {
+            mostrarMissatge('Exit', 'L\'acció s\'ha completat amb èxit.', 'success-message');
+        }
+
+        function simularError() {
+            mostrarMissatge('Error', 'Hi ha hagut un error en processar la sol·licitud.', 'error-message');
+        }
+
+        function mostrarMissatge(tipus, text, estil) {
+            var missatgeEstat = document.getElementById('missatge-estat');
+            missatgeEstat.textContent = '[' + tipus + '] ' + text;
+            missatgeEstat.className = estil;
+
+            setTimeout(function() {
+                missatgeEstat.textContent = '';
+                missatgeEstat.className = '';
+            }, 5000); 
+        }
+    </script>
+</body>
+</html>

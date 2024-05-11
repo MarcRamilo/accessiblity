@@ -1,0 +1,12 @@
+/* Estilos para el contenedor de mensajes de estado */
+#status-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    display: none; /* Inicialmente oculto */
+  }
+  
